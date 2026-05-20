@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rafael Lima Fotografia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#D7D7D6;
+      color:#272836;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* MENU */
+
+    header{
+      padding:20px 0;
+    }
+
+    .navbar{
+      background:#272836;
+      padding:15px 25px;
+      border-radius:50px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      color:#D7D7D6;
+      font-size:24px;
+      font-weight:700;
+    }
+
+    .menu{
+      display:flex;
+      gap:30px;
+      align-items:center;
+    }
+
+    .menu a{
+      color:#D7D7D6;
+      font-size:14px;
+      transition:.3s;
+    }
+
+    .menu a:hover{
+      opacity:.7;
+    }
+
+    .btn-menu{
+      background:#D7D7D6;
+      color:#272836 !important;
+      padding:10px 22px;
+      border-radius:30px;
+      font-weight:600;
+    }
+
+    /* HERO */
+
+    .hero{
+      margin-top:20px;
+      height:650px;
+      border-radius:30px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero img{
+      height:100%;
+      object-fit:cover;
+      filter:brightness(70%);
+    }
+
+    .hero-text{
+      position:absolute;
+      bottom:60px;
+      left:60px;
+      color:#272836;
+    }
+
+    .hero-text h1{
+      font-size:64px;
+      line-height:1.1;
+      font-weight:700;
+      max-width:600px;
+    }
+
+    /* SOBRE */
+
+    .about{
+      padding:120px 0;
+    }
+
+    .about-content{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:60px;
+    }
+
+    .about-text{
+      flex:1;
+    }
+
+    .section-title{
+      font-size:38px;
+      margin-bottom:25px;
+    }
+
+    .about-text p{
+      color:#595D66;
+      line-height:1.9;
+      font-size:16px;
+    }
+
+    .about-image{
+      width:350px;
+      height:450px;
+      overflow:hidden;
+      border-radius:25px;
+    }
+
+    .about-image img{
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* REDES */
+
+    .socials{
+      padding-bottom:120px;
+    }
+
+    .social-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:30px;
+      margin-top:40px;
+      text-align: center;
+    }
+
+    .social-card{
+      background:#272836;
+      padding:20px;
+      border-radius:25px;
+    }
+
+    .nome-redes{
+    display: flex;
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza tudo */
+    gap: 10px;
+    color: #D7D7D6;
+    }
+
+    .titulo-redes{
+        margin: 0;
+    }
+
+    .social-card2{
+        background-color: #D7D7D6;
+    }
+
+    .icon-social{
+        width: 25px;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio{
+      padding-bottom:120px;
+    }
+
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .portfolio-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:25px;
+      height:420px;
+      cursor:pointer;
+    }
+
+    .portfolio-card img{
+      height:100%;
+      object-fit:cover;
+      transition:.4s;
+      filter:brightness(70%);
+    }
+
+    .portfolio-card:hover img{
+      transform:scale(1.05);
+    }
+
+    .portfolio-card h3{
+      position:absolute;
+      bottom:25px;
+      left:25px;
+      color:#D7D7D6;
+      font-size:28px;
+    }
+
+    /* DEPOIMENTOS */
+
+    .testimonials{
+      background:#272836;
+      padding:100px 0;
+    }
+
+    .testimonials .section-title{
+      color:#D7D7D6;
+    }
+
+    .testimonial-grid{
+      margin-top:40px;
+
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:20px;
+    }
+
+    .testimonial-card{
+      background:#D7D7D6;
+      padding:25px;
+      border-radius:20px;
+    }
+
+    .stars{
+      color:#595D66;
+      margin-bottom:15px;
+    }
+
+    .testimonial-card p{
+      color:#595D66;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#272836;
+      padding:100px 0;
+    }
+
+    .footer-content{
+      display:flex;
+      justify-content:space-between;
+      gap:60px;
+    }
+
+    .footer-left{
+      flex:1;
+    }
+
+    .footer-left h2{
+      color:#D7D7D6;
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .footer-left p{
+      color:#595D66;
+      margin-bottom:30px;
+      max-width:400px;
+      line-height:1.8;
+    }
+
+    .footer-info{
+      margin-top:40px;
+    }
+
+    .footer-info h4{
+      color:#D7D7D6;
+      margin-bottom:5px;
+    }
+
+    .footer-info span{
+      color:#595D66;
+      display:block;
+      margin-bottom:20px;
+    }
+
+    .footer-form{
+      flex:1;
+      background:#D7D7D6;
+      padding:40px;
+      border-radius:25px;
+    }
+
+    .input-group{
+      margin-bottom:25px;
+    }
+
+    .input-group input,
+    .input-group textarea{
+      width:100%;
+      border:none;
+      border-bottom:2px solid #595D66;
+      background:transparent;
+      padding:12px 0;
+      outline:none;
+      color:#272836;
+      resize:none;
+    }
+
+    .footer-form button{
+      width:100%;
+      border:none;
+      background:#272836;
+      color:#D7D7D6;
+      padding:16px;
+      border-radius:30px;
+      cursor:pointer;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .footer-form button:hover{
+      opacity:.9;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width: 1000px){
+
+      .about-content,
+      .footer-content{
+        flex-direction:column;
+      }
+
+      .testimonial-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .portfolio-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text h1{
+        font-size:48px;
+      }
+    }
+
+    @media(max-width: 700px){
+
+      .navbar{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .social-grid,
+      .testimonial-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        height:500px;
+      }
+
+      .hero-text{
+        left:30px;
+        bottom:30px;
+      }
+
+      .hero-text h1{
+        font-size:38px;
+      }
+
+      .section-title{
+        font-size:30px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+
+  <!-- <header>
+    <div class="container">
+      <nav class="navbar">
+
+        <div class="logo">
+          Rafael Lima
+        </div>
+
+        <div class="menu">
+          <a href="#">Sobre mim</a>
+          <a href="#">Portfólio</a>
+          <a href="#">Depoimentos</a>
+          <a href="#">Contato</a>
+
+          <a href="#" class="btn-menu">
+            Entrar
+          </a>
+        </div>
+
+      </nav>
+    </div>
+  </header> -->
+
+  <!-- HERO -->
+
+  <!-- <section class="container">
+    <div class="hero">
+
+      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1400&auto=format&fit=crop" alt="Camera">
+
+      <div class="hero-text">
+        <h1>Pinturas feitas por câmeras</h1>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- SOBRE -->
+
+  <!-- <section class="about">
+    <div class="container">
+
+      <div class="about-content">
+
+        <div class="about-text">
+
+          <h2 class="section-title">
+            Sobre mim
+          </h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptate architecto placeat ipsa consequatur, magni
+            perspiciatis. Tempore dolore molestiae pariatur asperiores
+            doloremque officiis nobis cupiditate amet distinctio,
+            reprehenderit at laborum alias.
+          </p>
+
+        </div>
+
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=900&auto=format&fit=crop" alt="">
+        </div>
+
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- REDES -->
+
+  <section class="socials">
+    <div class="container">
+
+      <h2 class="section-title">
+        Redes Sociais:
+      </h2>
+
+      <div class="social-grid">
+
+        <div class="social-card">
+            
+            <div class="nome-redes">
+                <img class="icon-social" src="instagram.png" alt="">
+                <h4 class="titulo-redes">instagram</h4>
+            </div>
+
+            <div class="social-card2"> 
+                <h1>oi</h1>
+            </div>
+
+        </div>
+
+        <div class="social-card">
+          <img src="https://placehold.co/600x350/D7D7D6/272836?text=TikTok" alt="">
+        </div>
+
+        <div class="social-card">
+          <img src="https://placehold.co/600x350/D7D7D6/272836?text=Pinterest" alt="">
+        </div>
+
+        <div class="social-card">
+          <img src="https://placehold.co/600x350/D7D7D6/272836?text=VSCO" alt="">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+
+  <section class="portfolio">
+    <div class="container">
+
+      <h2 class="section-title">
+        Explore nosso portfólio!
+      </h2>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop" alt="">
+          <h3>Casamentos</h3>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="https://images.unsplash.com/photo-1525258946800-98cfd641d0de?q=80&w=1000&auto=format&fit=crop" alt="">
+          <h3>Eventos</h3>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop" alt="">
+          <h3>Ensaios</h3>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+
+  <section class="testimonials">
+    <div class="container">
+
+      <h2 class="section-title">
+        Depoimentos:
+      </h2>
+
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Trabalho impecável! Cada foto ficou incrível e registrou
+            perfeitamente nosso momento especial.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Atendimento excelente e fotos maravilhosas.
+            Super recomendamos o trabalho!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Ficamos apaixonados pelo resultado final.
+            Tudo muito profissional e emocionante.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Melhor escolha para registrar nosso casamento.
+            As fotos ficaram perfeitas!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-content">
+
+        <div class="footer-left">
+
+          <h2>Rafael Lima</h2>
+
+          <p>
+            Registre seus momentos conosco!
+            Entre em contato para pacotes e
+            orçamentos personalizados.
+          </p>
+
+          <div class="footer-info">
+
+            <h4>Email:</h4>
+            <span>rafaellima@email.com</span>
+
+            <h4>Telefone:</h4>
+            <span>+55 (11) 91010-1010</span>
+
+          </div>
+
+        </div>
+
+        <form class="footer-form">
+
+          <div class="input-group">
+            <input type="text" placeholder="Nome">
+          </div>
+
+          <div class="input-group">
+            <input type="email" placeholder="Email">
+          </div>
+
+          <div class="input-group">
+            <input type="text" placeholder="Telefone">
+          </div>
+
+          <div class="input-group">
+            <textarea rows="4" placeholder="Escreva sua mensagem"></textarea>
+          </div>
+
+          <button type="submit">
+            Enviar
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
