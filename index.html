@@ -23,6 +23,12 @@
           Rafael Lima
         </div>
 
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <div class="menu">
           <a href="#sobre">Sobre mim</a>
           <a href="#redes">Redes Sociais</a>
@@ -61,11 +67,15 @@
           </h2>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate architecto placeat ipsa consequatur, magni
-            perspiciatis. Tempore dolore molestiae pariatur asperiores
-            doloremque officiis nobis cupiditate amet distinctio,
-            reprehenderit at laborum alias.
+            Apaixonado por transformar momentos especiais em memórias eternas, Rafael Lima atua como fotógrafo profissional especializado em casamentos, 
+            eventos e ensaios fotográficos. Com um olhar sensível e criativo, seu trabalho busca capturar emoções reais, detalhes únicos e toda a 
+            essência de cada história.
+
+            Ao longo de sua trajetória, Rafael desenvolveu um estilo leve, elegante e espontâneo, valorizando cada sorriso, abraço e instante vivido. 
+            Seu objetivo vai além de apenas fotografar: ele deseja proporcionar uma experiência marcante e confortável para cada cliente.
+
+            Seja em um casamento inesquecível, uma celebração especial ou um ensaio personalizado, Rafael acredita que cada momento merece ser 
+            registrado com autenticidade e carinho.
           </p>
 
         </div>
@@ -85,7 +95,7 @@
     <div class="container">
 
       <h2 class="section-title">
-        Redes Sociais:
+        Redes Sociais
       </h2>
 
       <div class="social-grid">
@@ -208,7 +218,7 @@
   <section>
     <div class="container">
       <h2 class="section-title">
-        Depoimentos:
+        Depoimentos
       </h2>
     </div>
   </section>
@@ -326,6 +336,17 @@
     </div>
 
   </footer>
+
+  <script>
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+  </script>
 
 </body>
 </html>
