@@ -10,6 +10,14 @@ body{
     color:#272836;
 }
 
+html{
+    scroll-behavior: smooth;
+  }
+  
+:target{
+    scroll-margin-top: 100px;
+}
+
 img{
     width:100%;
     display:block;
@@ -391,6 +399,28 @@ footer{
     float: right;
 }
 
+/* botao de voltar ao topo */
+.btn-back-to-top{
+    background-color: #272836;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-back-to-top:hover{
+    background-color: #595D66;
+}
+.back-to-top-visible{
+    display: flex;
+}
+
 
 /* RESPONSIVO */
 
@@ -474,6 +504,7 @@ footer{
 
     .navbar{
         position:relative;
+        overflow: visible;
     }
 
     .menu-toggle{
@@ -483,9 +514,13 @@ footer{
     .menu{
         position:absolute;
         top:90px;
-        right:0;
+
+        left:50%;
+        transform:translateX(-50%);
+
+        width:90%;
         background:#272836;
-        width:100%;
+
         border-radius:25px;
         padding:30px;
 
@@ -493,6 +528,8 @@ footer{
         flex-direction:column;
         align-items:center;
         gap:20px;
+
+        z-index:999;
     }
 
     .menu.active{
@@ -501,6 +538,7 @@ footer{
 
     .banner{
         height:100%;
+        overflow: visible;
     }
 
 }
