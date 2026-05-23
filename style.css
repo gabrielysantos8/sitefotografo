@@ -600,6 +600,16 @@ footer{
     url("img/casamento/banner-casamento.jpg") center/cover no-repeat;
 }
 
+.bpeventos{
+    background: 
+    url("img/eventos/banner-eventos.jpg") center/cover no-repeat;
+}
+
+.bpensaios{
+    background: 
+    url("img/ensaios/banner-ensaios.jpg") center/cover no-repeat;
+}
+
 /*galeria*/
 
 .row{
