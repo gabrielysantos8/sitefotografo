@@ -1,3 +1,15 @@
+/* MENU */
+
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+
+/* BOTÃO BACK TO TOP*/
+
 const backToTopElement = document.getElementById("back-to-top")
 
 const handleBackToTop = () => {
@@ -6,7 +18,7 @@ const handleBackToTop = () => {
 
 backToTopElement.addEventListener("click", handleBackToTop)
 
-const elementToObserve = document.querySelector("body img:first-of-type")
+const elementToObserve = document.querySelector("body h1:first-of-type")
 
 const options = {
   root: null,

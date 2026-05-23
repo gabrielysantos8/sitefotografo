@@ -79,7 +79,7 @@ a{
     color:#272836 !important;
     padding:10px 22px;
     border-radius:30px;
-    font-weight:600;
+    font-weight:700;
 }
 
 /* banner */
@@ -204,7 +204,7 @@ a{
 .btn-perfil{
     background-color: #D7D7D6;
     color: #272836;
-    padding: 10px;
+    padding: 10px 18px;
     border-radius: 25px;
 }
 
@@ -542,3 +542,224 @@ footer{
     }
 
 }
+
+/* PORTFÓLIOS - GALERIAS */
+
+.bannerport{
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+
+.overlay{
+  position: absolute;
+  inset: 0;
+
+  /* fade pra baixo */
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(217, 217, 217, 0),
+      rgba(217, 217, 217, 0.5),
+      rgba(217, 217, 217, 1)
+    );
+}
+
+.contentport{
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #272836;
+}
+
+.contentport h1{
+  font-size: 90px;
+  font-weight: 700;
+}
+
+.contentport p{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.text-center{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* planos de fundo*/
+.bpcasamento{
+  background:
+    url("img/casamento/banner-casamento.jpg") center/cover no-repeat;
+}
+
+/*galeria*/
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-4{
+    width: calc(100% / 3);
+}
+
+.col-4 img{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}    
+
+/* pacotes */
+
+.pacotes{
+    background:#595D66;
+    color:#D7D7D6;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    border-radius:2px;
+}
+
+.pacote{
+    flex:1;
+}
+
+.pacote h2{
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.pacote p{
+    font-size:16px;
+    color: #D7D7D6;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+.pacote ul{
+    padding-left:20px;
+}
+
+.pacote li{
+    margin-bottom:8px;
+    color:#D7D7D6;
+    line-height:1.5;
+}
+
+.linha{
+    width:1px;
+    background:#D7D7D6;
+}
+
+.personalizar{
+    margin-top: 50px;
+}
+
+.pers-title{
+    font-size: 28px;
+}
+
+.persp{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn-pers{
+    background-color: #272836;
+    color: #D7D7D6;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+
+/* RESPONSIVO PORTIFÓLIO */
+
+@media(max-width:900px){
+
+    .pacotes{
+        gap:20px;
+    }
+
+    .pacote h2{
+        font-size:1.2rem;
+    }
+
+}
+
+
+@media(max-width:850px){
+
+    .pacotes{
+        flex-direction:column;
+    }
+
+    .linha{
+        width:100%;
+        height:1px;
+    }
+
+    .pacote{
+        width:100%;
+    }
+
+    .pacote h2{
+        font-size:1.3rem;
+    }
+
+    .pacote p,
+    .pacote li{
+        font-size:0.95rem;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .col-4 img{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .col-4{
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    body{
+        padding:10px;
+    }
+
+    .pacotes{
+        padding:20px;
+    }
+
+    .pacote h2{
+        font-size:1.1rem;
+    }
+
+    .pacote p,
+    .pacote li{
+        font-size:0.9rem;
+    }
+
+}
+
