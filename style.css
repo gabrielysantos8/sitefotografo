@@ -215,6 +215,10 @@ a{
 
 /* PORTFOLIO */
 
+.marginport{
+    margin-top: 120px;
+}
+
 .portfolio{
     padding-bottom:120px;
 }
@@ -438,7 +442,7 @@ footer{
 .pacotes-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-    gap:25px;
+    gap: 25px;
 }
 
 .pacotes-card{
@@ -446,7 +450,6 @@ footer{
     color:#D7D7D6;
     padding:25px;
     border-radius:25px;
-    margin: 15px;
 }
 
 .pacotes-card-titulo{
@@ -483,7 +486,6 @@ footer{
 .personalizado-box{
     background:#D7D7D6;
     border-radius:20px;
-    padding:35px 40px;
 }
 
 .personalizado-titulo{
@@ -729,6 +731,11 @@ footer{
 .bpensaios{
     background: 
     url("img/ensaios/banner-ensaios.jpg") center/cover no-repeat;
+}
+
+.bpgaleria{
+    background: 
+    url("img/galeriapessoal/banner-galeria.jpg") center/cover no-repeat;
 }
 
 /*galeria*/
