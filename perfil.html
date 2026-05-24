@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafael Lima Fotografia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- menu -->
+
+  <header>
+      <nav class="navbar">
+        <div class="logo">
+          Rafael Lima
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu">
+          <a href="home.html">Home</a>
+          <a href="#galeria">Sua Galeria</a>
+          <a href="#agendamento">Agendamentos</a>
+        </div>
+      </nav>
+  </header>
+
+  <!-- parte do perfil  -->
+<!-- parte do perfil -->
+<section class="perfil-section">
+  <div class="perfil-card">
+
+    <div class="perfil-foto">
+      <img 
+        src="img/foto de perfil.jpg" 
+        alt="Foto do usuário"
+        id="fotoPerfil"
+      >
+    </div>
+
+    <div class="perfil-info">
+
+      <h2 class="perfil-nome" id="perfilNome">
+        Nome do usuário
+      </h2>
+
+      <div class="perfil-item">
+        <h3>Email</h3>
+
+        <a 
+          href="mailto:usuario@email.com"
+          id="perfilEmail"
+        >
+          usuario@email.com
+        </a>
+      </div>
+
+      <div class="perfil-item">
+        <h3>Telefone</h3>
+
+        <p id="perfilTelefone">
+          +55 (11) 99863-5546
+        </p>
+      </div>
+
+    </div>
+
+    <div class="perfil-acoes">
+
+      <button class="perfil-btn" id="abrirModal">
+        Editar perfil
+      </button>
+
+      <a href="rec_email.html" class="perfil-btn">
+        Trocar senha
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- MODAL EDITAR PERFIL -->
+
+<section class="modal-editar" id="modalEditar">
+
+  <div class="modal-box">
+
+
+    <h2 class="modal-titulo">
+      Edite seu perfil!
+    </h2>
+
+    <div class="modal-conteudo">
+
+      <!-- FOTO -->
+
+      <div class="modal-foto-area">
+
+        <div class="modal-foto">
+          <img
+            id="previewFoto"
+            src="img/foto de perfil.jpg"
+            alt=""
+          >
+        </div>
+
+        <label for="inputFoto" class="trocar-foto">
+          Trocar foto de perfil
+        </label>
+
+        <input
+          type="file"
+          id="inputFoto"
+          accept="image/*"
+          hidden
+        >
+
+      </div>
+
+      <!-- FORM -->
+
+      <form class="modal-form" id="formPerfil">
+
+        <div class="modal-input">
+
+          <label>
+            Nome de Usuário:
+          </label>
+
+          <input
+            type="text"
+            id="editarNome"
+            placeholder="Digite seu nome"
+          >
+
+        </div>
+
+        <div class="modal-input">
+
+          <label>
+            Email:
+          </label>
+
+          <input
+            type="email"
+            id="editarEmail"
+            placeholder="Digite seu email"
+          >
+
+        </div>
+
+        <div class="modal-input">
+
+          <label>
+            Telefone:
+          </label>
+
+          <input
+            type="text"
+            id="editarTelefone"
+            placeholder="Digite seu telefone"
+          >
+
+        </div>
+
+        <div class="modal-botoes">
+
+          <button type="button" id="cancelarModal">
+            Cancelar
+          </button>
+
+          <button type="submit">
+            Atualizar
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- Galeria -->
+
+  <section id="galeria" class="portfolio">
+    <div class="container">
+
+      <h2 class="section-title">
+        Explore Sua Galeria!
+      </h2>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+          <a href="casamentos.html"><img src="img/galeriapessoal/pexels-bertellifotografia-30464360.jpg" alt=""></a>
+          
+          <h3>Álbum 1</h3>
+          
+        </div>
+
+        <div class="portfolio-card">
+          <a href="eventos.html"><img src="img/galeriapessoal/pexels-iriser-1734432.jpg" ></a>
+          <h3>Álbum 2</h3>
+        </div>
+
+        <div class="portfolio-card">
+          <a href="ensaios.html"><img src="img/galeriapessoal/pexels-rebornfilmes-35495418.jpg" alt=""></a>
+          <h3>Álbum 3</h3>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- agendamento -->
+
+  <section id="agendamento" class="agendamento-section">
+    <div class="container" >
+        <h2 class="section-title">
+            Faça um novo agendamento!
+        </h2>
+
+        <div class="agendamento-container">
+
+            <form class="agendamento-form" id="formAgendamento">
+
+            <!-- esquerdo -->
+
+            <div class="agendamento-coluna">
+
+                <div class="agendamento-grupo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                </div>
+
+                <div class="agendamento-grupo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                </div>
+
+                <div class="agendamento-grupo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" required>
+                </div>
+
+                <div class="agendamento-grupo">
+                <label for="data">Selecione uma data:</label>
+                <input type="date" id="data" required>
+                </div>
+
+                <div class="agendamento-grupo">
+
+                <label>Selecione a categoria:</label>
+
+                <div class="agendamento-opcoes">
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="categoria" value="Casamento" required>
+                    Casamento
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="categoria" value="Evento">
+                    Evento
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="categoria" value="Ensaio fotográfico">
+                    Ensaio fotográfico
+                    </label>
+
+                </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- direito -->
+
+            <div class="agendamento-coluna">
+
+                <div class="agendamento-grupo">
+
+                <label>Selecione o pacote:</label>
+
+                <div class="agendamento-opcoes">
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Personalizado" required>
+                    Personalizado
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Pacote Casamento Essencial">
+                    Pacote Casamento Essencial
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Pacote Casamento Clássico">
+                    Pacote Casamento Clássico
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Pacote Casamento Premium">
+                    Pacote Casamento Premium
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Pacote Social">
+                    Pacote Social
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Pacote Debutante">
+                    Pacote Debutante
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Pacote Corporativo">
+                    Pacote Corporativo
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Ensaio Lifestyle">
+                    Ensaio Lifestyle
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Ensaio Gestante">
+                    Ensaio Gestante
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Ensaio Newborn">
+                    Ensaio Newborn
+                    </label>
+
+                    <label class="agendamento-radio">
+                    <input type="radio" name="pacote" value="Ensaio Formatura">
+                    Ensaio Formatura
+                    </label>
+
+                </div>
+
+                </div>
+
+                <div class="agendamento-grupo">
+                <label for="mensagem">
+                    Mensagem <span>(opcional):</span>
+                </label>
+
+                <textarea id="mensagem"></textarea>
+                </div>
+
+                <button type="submit" class="agendamento-btn">
+                Enviar
+                </button>
+
+            </div>
+
+            </form>
+
+            <p class="agendamento-aviso">
+            Nossa equipe entrará em contato em breve com mais informações sobre o seu agendamento.
+            </p>
+
+        </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer id="contato">
+
+    <div class="container">
+
+      <div class="footer-content">
+
+        <div class="footer-left">
+
+          <h2>Rafael Lima</h2>
+          <h3>Registre seus momentos conosco!</h3>
+
+          <p>
+            Entre em contato para pacotes e
+            orçamentos personalizados.
+          </p>
+
+          <hr>
+
+          <div class="footer-info">
+
+            <h4>Email:</h4>
+            <span>rafaellima@email.com</span>
+
+            <h4>Telefone:</h4>
+            <span>+55 (11) 91010-1010</span>
+
+          </div>
+
+          <hr>
+
+          <p class="pfooter">@limafotografia</p>
+
+        </div>
+
+        <form class="footer-form">
+
+          <div class="input-group">
+            <img class="icons-form" src="img/icon-nome.png" alt="">
+            <input type="text" placeholder="Nome">
+          </div>
+
+          <div class="input-group">
+            <img class="icons-form" src="img/icon-email.png" alt="">
+            <input type="email" placeholder="Email">
+          </div>
+
+          <div class="input-group">
+            <img class="icons-form" src="img/icon-telefone.png" alt="">
+            <input type="text" placeholder="Telefone">
+          </div>
+
+          <div class="input-group textarea-group">
+            <img class="icons-form" src="img/icon-mensagem.png" alt="">
+            <textarea rows="4" placeholder="Escreva sua mensagem"></textarea>
+          </div>
+
+          <button type="submit">
+            <img class="icon-btn-form" src="img/icon-enviar.png" alt="">
+            Enviar
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- BOTÃO BACK TO TOP -->
+
+  <aside id="back-to-top" class="btn-back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 12"><path fill="#fff" d="M6 10.5a.75.75 0 0 0 .75-.75V3.81l1.97 1.97a.75.75 0 0 0 1.06-1.06L6.53 1.47a.75.75 0 0 0-1.06 0L2.22 4.72a.75.75 0 1 0 1.06 1.06l1.97-1.97v5.94c0 .414.336.75.75.75"/></svg>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
