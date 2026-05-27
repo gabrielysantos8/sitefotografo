@@ -1482,3 +1482,19 @@ footer{
     }
 
 }
+
+.salvar-btn{
+    display:inline-block;
+    background:#272836;
+    color:#D7D7D6;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.div-salvar-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
